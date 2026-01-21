@@ -1,0 +1,22 @@
+{
+  "name": "code-quality-setup",
+  "version": "1.0.0",
+  "description": "One command setup for ESLint, Prettier, Husky and lint-staged",
+  "type": "module",
+  "bin": {
+    "code-quality-setup": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ],
+  "keywords": [
+    "eslint",
+    "prettier",
+    "husky",
+    "lint-staged",
+    "code-quality",
+    "cli"
+  ],
+  "license": "MIT"
+}
