@@ -10,6 +10,14 @@
     "bin",
     "templates"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahabeer-dev/code-quality-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahabeer-dev/code-quality-setup/issues"
+  },
+  "homepage": "https://github.com/mahabeer-dev/code-quality-setup#readme",
   "keywords": [
     "eslint",
     "prettier",
@@ -18,5 +26,10 @@
     "code-quality",
     "cli"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "execa": "^9.0.0",
+    "prompts": "^2.4.2"
+  }
 }

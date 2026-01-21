@@ -4,3 +4,5 @@ dist
 .DS_Store
 npm-debug.log*
 pnpm-debug.log*
+
+test-code-quality
