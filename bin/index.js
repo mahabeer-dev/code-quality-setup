@@ -41,6 +41,17 @@ const run = (cmd, args) => execa(cmd, args, { stdio: "inherit", cwd });
   const installCmd = pm === "pnpm" ? "add" : "install";
   const execCmd = pm;
 
+  const { projectType } = await prompts({
+    type: "select",
+    name: "projectType",
+    message: "Which project type?",
+    choices: [
+      { title: "React (Web)", value: "react" },
+      { title: "React Native", value: "react-native" },
+    ],
+    initial: 0,
+  });
+
   /* ================================
      Install dev dependencies
   ================================= */
@@ -62,7 +73,7 @@ const run = (cmd, args) => execa(cmd, args, { stdio: "inherit", cwd });
   ================================= */
   console.log("\n📄 Copying config files...\n");
 
-  const templateDir = path.join(__dirname, "../templates");
+  const templateDir = path.join(__dirname, "../templates", projectType);
 
   await fs.copy(templateDir, cwd, {
     overwrite: false,
@@ -104,7 +115,7 @@ const run = (cmd, args) => execa(cmd, args, { stdio: "inherit", cwd });
 . "$(dirname "$0")/_/husky.sh"
 
 ${execCmd} lint-staged
-`
+`,
   );
 
   await execa("chmod", ["+x", hookPath]);
