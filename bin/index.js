@@ -62,7 +62,7 @@ const run = (cmd, args) => execa(cmd, args, { stdio: "inherit", cwd });
 
   if (!pm) process.exit(0);
 
-  const installCmd = pm === "pnpm" ? "add" : "install";
+  const installCmd = pm === "pnpm" || pm === "yarn" ? "add" : "install";
   const execCmd = pm;
 
   /* ---------- project type ---------- */
