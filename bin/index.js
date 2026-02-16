@@ -29,6 +29,7 @@ const reactNativeDeps = [
   "typescript-eslint",
   "globals",
   "jiti",
+  "@eslint/js"
 ];
 
 /* ================================
