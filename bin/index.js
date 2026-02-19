@@ -22,14 +22,14 @@ const commonDeps = [
   "lint-staged",
   "eslint-config-prettier",
   "eslint-plugin-prettier",
+  "typescript-eslint",
 ];
 
 const reactNativeDeps = [
   "eslint-plugin-react-hooks",
-  "typescript-eslint",
   "globals",
   "jiti",
-  "@eslint/js"
+  "@eslint/js",
 ];
 
 /* ================================
