@@ -1,6 +1,6 @@
 {
   "name": "code-quality-setup",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "One command setup for ESLint, Prettier, Husky and lint-staged",
   "type": "module",
   "bin": {
